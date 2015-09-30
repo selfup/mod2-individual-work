@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1><strong>Welcome,</strong> <em>Admin</em></h1>
+  <br>
+  <a class="btn btn-danger" <%= link_to "Logout", logout_path, method: :delete %>
+  <a class="btn btn-primary" <%= link_to "Create Image", new_image_path %></a>
+  <br><br>
+  <br>
+  <div class="container">
+      <div class="table responsive">
+        <table class="table">
+          <tr class="warning">
+            <th>Address</th>
+            <th>Change</th>
+            <th>Terminate</th>
+          </tr>
+         <% @images.each do |image| %>
+           <tr class="success">
+             <td> <%= link_to image.address[0..10], image_path(image) %> </td>
+             <td> <%= link_to "Edit", edit_image_path(image) %> </td>
+             <td> <%= link_to "Destroy", image_path(image), method: :delete %> </td>
+           </tr>
+         <% end %>
+       </table>
+     </div>
+   </div>
+ </div>

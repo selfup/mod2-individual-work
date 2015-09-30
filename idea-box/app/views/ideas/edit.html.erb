@@ -1,0 +1,14 @@
+<br><br>
+<div class="jumbotron">
+  <div class="form-group">
+    <%= form_for @idea do |f| %>
+      <p><%= f.label :title %><br></p>
+      <p><%= f.text_field :title %><br><br></p>
+      <p><%= f.label :description %><br></p>
+      <p><%= f.text_area :description %></p>
+      <%= f.collection_select :category_id, @categories, :id, :name %><br><br>
+      <br><br>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

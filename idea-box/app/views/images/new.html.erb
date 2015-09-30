@@ -1,0 +1,9 @@
+<div class="jumbotron">
+<h1>New Image!</h1>
+
+<%= form_for @image do |f| %>
+  <p><%= f.label :address %><br>
+  <%= f.text_field :address %><br><br>
+  <%= f.submit "Create Image" %></p>
+<% end %>
+<div>

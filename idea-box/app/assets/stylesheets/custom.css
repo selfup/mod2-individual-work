@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+  padding-top: 5px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+.jumbotron {
+  background-color: #219191 !important;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.a {
+  text-align: center;
+}
+
+.jumbotron a {
+    align-items: center;
+    border-radius: 25px;
+
+    border-bottom-width: none;
+    border-width: none;
+}
+
+.container {
+  text-align: left;
+}
+
+.table tbody tr > td.success {
+  background-color: #4CBABA !important;
+}
+
+.navbar {
+  background-color: #912121 !important;
+}
+
+@media (max-width: 1081px) {
+  .jumbotron {
+    text-align: center;
+    position: relative;
+    height: 100vh;
+    background-color: #219191 !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    background-position: center;
+    background-size: cover !important;
+    color: black;
+  }
+
+  .jumbotron li {
+      margin-left: -36px;
+      align-items: center;
+      border-radius: 25px;
+      border-color: black;
+      border-bottom-width: medium;
+      border-width: medium;
+  }
+
+}

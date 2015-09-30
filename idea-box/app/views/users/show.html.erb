@@ -1,0 +1,39 @@
+<div class="jumbotron">
+  <div class="profile-info">
+    <br>
+    <h1><strong> <%= @user.username %>'s </strong> <em>profile:</em> </h1>
+    <br>
+    <a class="btn btn-danger" <%= link_to "Logout", logout_path, method: :delete %></a>
+    <a class="btn btn-primary" <%= link_to "Create Idea", new_idea_path %></a>
+    <br><br>
+    <% if current_user.admin? %>
+       <a class="btn btn-success" <%= link_to "Category Console", categories_path %></a>
+       <a class="btn btn-success" <%= link_to "Image Console", images_path %></a>
+    <% end %>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="table responsive">
+      <table class="table">
+        <tr class="warning">
+          <th>Title</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Change</th>
+          <th>Terminate</th>
+        </tr>
+       <% @ideas.each do |idea| %>
+         <tr class="success">
+           <td> <%= link_to idea.title, idea_path(idea) %> </td>
+           <td> <%= idea.description %> </td>
+           <td><strong> <%= idea.category.name %> </strong></td>
+           <td> <%= link_to "Edit", edit_idea_path(idea) %> </td>
+           <td> <%= link_to "Destroy", idea_path(idea), method: :delete %> </td>
+         </tr>
+       <% end %>
+     </table>
+   </div>
+   </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<br><br>
+<div class="jumbotron">
+  <div class="form-group">
+    <%= form_for @image do |f| %>
+      <p><%= f.label :address %><br></p>
+      <p><%= f.text_field :address %><br><br></p>
+      <br><br>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
